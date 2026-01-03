@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Chat Bot",
-    "slug": "chat-bot-app",
+    "slug": "chat-bot",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -9,7 +9,8 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.harryplusplus.chatbot"
     },
     "android": {
       "adaptiveIcon": {
@@ -38,6 +39,12 @@
             "backgroundColor": "#000000"
           }
         }
+      ],
+      [
+        "@react-native-google-signin/google-signin",
+        {
+          "iosUrlScheme": "com.googleusercontent.apps.740994650756-5ln02nagof20qhifra4ps2p1lbimshh3"
+        }
       ]
     ],
     "experiments": {
@@ -46,7 +53,7 @@
     },
     "extra": {
       "eas": {
-        "projectId": "2987a6a9-42a5-48ab-a063-5e647fd90dbe"
+        "projectId": "68df0b79-1022-475f-b884-1462a2c29264"
       }
     },
     "owner": "hunhoekim"
