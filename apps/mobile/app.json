@@ -24,6 +24,7 @@
       "package": "com.harryplusplus.chatbot"
     },
     "web": {
+      "bundler": "metro",
       "output": "static",
       "favicon": "./assets/images/favicon.png"
     },
