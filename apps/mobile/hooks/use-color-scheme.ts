@@ -2,7 +2,7 @@ import { useColorScheme as useColorSchemeInternal } from 'react-native'
 
 export function useColorScheme(): 'light' | 'dark' {
   const name = useColorSchemeInternal()
-  if (name === 'unspecified') {
+  if (!name) {
     return 'light'
   }
 
