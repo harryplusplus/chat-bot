@@ -11,7 +11,11 @@ import tseslint from 'typescript-eslint'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig([
-  globalIgnores(['**/dist']),
+  globalIgnores([
+    '**/dist',
+    'eslint.config.js',
+    'apps/mobile/scripts/reset-project.js',
+  ]),
   eslint.configs.recommended,
   tseslint.configs.recommendedTypeChecked,
   eslintPluginPrettierRecommended,
@@ -19,7 +23,9 @@ export default defineConfig([
     languageOptions: {
       parser: tsParser,
       parserOptions: {
-        projectService: true,
+        projectService: {
+          allowDefaultProject: ['prettier.config.js'],
+        },
         tsconfigRootDir: __dirname,
       },
     },
